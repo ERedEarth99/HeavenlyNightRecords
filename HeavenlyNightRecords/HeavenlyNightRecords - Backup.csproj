@@ -5,7 +5,6 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageProjectUrl>http://localhost:8081/</PackageProjectUrl>
-    <RepositoryUrl></RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

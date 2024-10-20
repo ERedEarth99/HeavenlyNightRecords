@@ -2,3 +2,43 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stachpath.bootsrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <title>Heavenly Night Records</title>
+</head> 
+<body>
+	<div class="container mt-5">
+	<h2>Records</h2>
+	<a asp-action="Create" class="btn btn-primary">Add New Album</a>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Cover</th>
+				<th?>
+					Title</th>
+					<th>Artist</th>
+					<th>Genre</th>
+					<th>Year</th>
+					<th>Price</th>
+					<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var record in Model)
+			{
+				<tr><img src="@record.Cover" alt="@record.Artist" style="width:100px; height:auto;" /></tr>
+				<tr>@record.Artist</tr>
+				<tr>@record.Genre</tr>
+			<td>
+				<a asp-action="Edit" asp-all-route-id"="@record.Id" class="btn bth-warning">Edit</a>
+				<a asp-action="Delete" asp-all-route-id"="@record.Id" class="btn bth-danger">Delete</a>
+			</td>
+			}
+
+
+	</div>
+</body>
+</html>

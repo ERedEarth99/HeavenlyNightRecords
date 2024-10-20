@@ -10,10 +10,11 @@ namespace HeavenlyNightRecords.Models
         public DbSet<Records> Record { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Records>().HasData(
+            _ = modelBuilder.Entity<Records>().HasData(
                 new Records
                 {
                     Id = 1,
+                    Cover = "/Albums Covers/RnB/AML.png",
                     Artist = "Childish Gambino",
                     Album = "Awaken, My Love!",
                     Genre = "RnB",
@@ -23,6 +24,7 @@ namespace HeavenlyNightRecords.Models
                 new Records
                 {
                     Id = 2,
+                    Cover = "/Albums Covers/RnB/SIM.png",
                     Artist = "Alicia Keys",
                     Album = "Songs in A Minor",
                     Genre = "RnB",
@@ -31,6 +33,7 @@ namespace HeavenlyNightRecords.Models
                 }, new Records
                 {
                     Id = 3,
+                    Cover = "/Albums Covers/Rap/MAAD.png",
                     Artist = "Kendrick Lamar",
                     Album = "Good Kid, M.A.A.D City",
                     Genre = "Rap",
@@ -39,6 +42,7 @@ namespace HeavenlyNightRecords.Models
                 }, new Records
                 {
                     Id = 4,
+                    Cover = "/Albums Covers/Rap/OPDD.png",
                     Artist = "MF DOOM",
                     Album = "Operation: Doomsday",
                     Genre = "Rap",
@@ -47,6 +51,7 @@ namespace HeavenlyNightRecords.Models
                 }, new Records
                 {
                     Id = 5,
+                    Cover = "/Albums Covers/Rock/AR.png",
                     Artist = "The Beatles",
                     Album = "Abbey Road",
                     Genre = "Rock",
@@ -56,6 +61,7 @@ namespace HeavenlyNightRecords.Models
                 new Records
                 {
                     Id = 6,
+                    Cover = "/Albums Covers/Rock/DSOM.png",
                     Artist = "Pink Floyd",
                     Album = "The Dark Side of the Moon",
                     Genre = "Rock",
@@ -66,6 +72,7 @@ namespace HeavenlyNightRecords.Models
                 {
                     Id = 7,
                     Artist = "Slayer",
+                    Cover = "/Albums Covers/Metal/SITA.png",
                     Album = "Seasons in the Abyss",
                     Genre = "Metal",
                     year = 1990,
@@ -74,6 +81,7 @@ namespace HeavenlyNightRecords.Models
                 new Records
                 {
                     Id = 8,
+                    Cover = "/Albums Covers/Metal/BB.png",
                     Artist = "Blackbraid",
                     Album = "Blackbraid I",
                     Genre = "Metal",
@@ -83,6 +91,7 @@ namespace HeavenlyNightRecords.Models
                 new Records
                 {
                     Id = 9,
+                    Cover = "/Albums Covers/Jazz/CB.png",
                     Artist = "Chet Baker",
                     Album = "Chet Baker Sings",
                     Genre = "Jazz",
@@ -92,6 +101,7 @@ namespace HeavenlyNightRecords.Models
                 new Records
                 {
                     Id = 10,
+                    Cover = "/Albums Covers/Jazz/DEJC.png",
                     Artist = "Duke Ellington & John Coltrane",
                     Album = "The Duke Ellington & John Coltrane Album",
                     Genre = "Jazz",
@@ -101,6 +111,7 @@ namespace HeavenlyNightRecords.Models
                 new Records
                 {
                     Id = 11,
+                    Cover = "/Albums Covers/Jazz/S.png",
                     Artist = "Ryo Fukui",
                     Album = "Scenery",
                     Genre = "Jazz",
@@ -110,6 +121,7 @@ namespace HeavenlyNightRecords.Models
                 new Records
                 {
                     Id = 12,
+                    Cover = "/Albums Covers/Pop/FAME.png",
                     Artist = "Lady Gaga",
                     Album = "The Fame",
                     Genre = "Pop",
@@ -119,6 +131,7 @@ namespace HeavenlyNightRecords.Models
                 new Records
                 {
                     Id = 13,
+                    Cover = "/Albums Covers/Pop/MIB.png",
                     Artist = "Wham!",
                     Album = "Make It Big",
                     Genre = "Pop",
@@ -128,14 +141,17 @@ namespace HeavenlyNightRecords.Models
                 new Records
                 {
                     Id = 14,
+                    Cover = "/Albums Covers/Country/CST.png",
                     Artist = "Chris Stapleton",
                     Album = "Traveller",
                     Genre = "Country",
                     year = 2015,
                     Price = 20
-                }, new Records
+                },
+                new Records
                 {
                     Id = 15,
+                    Cover = "/Albums Covers/Country/BOI.png",
                     Artist = "Johnny Cash",
                     Album = "Bitter Tears: Ballads of the American Indian",
                     Genre = "Country",

@@ -1,0 +1,13 @@
+﻿@model Records
+<h2>Delete Album</h2>
+<h3>Are you sure you want to delete?</h3>
+<div>
+	<img src="@Model.Cover" alt="@Model.Artist" style="width:100px; height:auto;" />
+	<p>Artist: @Model.Artist</p>
+	<p>Genre: @Model.Genre</p>
+</div>
+<form asp-action="DeleteConfirmed">
+	<input type="hidden" asp-for="Id" />
+	<button type="submit" class="btn btn-danger">Delete</button>
+	<a asp-action="Index" class="btn btn-secondary">Cancel</a>
+</form>

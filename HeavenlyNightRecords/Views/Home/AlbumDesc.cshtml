@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Records>
+
+	<h2>Records</h2>
+	<a asp-action="Create" class="btn btn-primary">Add New Album</a>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Cover</th>
+				<th?>Title</th>
+				<th>Artist</th>
+				<th>Genre</th>
+				<th>Year</th>
+				<th>Price</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+		@foreach (var record in Model)
+		{
+					<tr><img src="@record.Cover" alt="@record.Artist" style="width:100px; height:auto;" /></tr>
+					<tr>@record.Artist</tr>
+					<tr>@record.Genre</tr>
+					<td>
+						<a asp-action="Edit" asp-all-route-id"="@record.Id" class="btn bth-warning">Edit</a>
+						<a asp-action="Delete" asp-all-route-id"="@record.Id" class="btn bth-danger">Delete</a>
+					</td>
+}
+		</tbody>
+	</table>
